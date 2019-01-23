@@ -65,7 +65,7 @@
         />
       </picture>
       <p class="spiegelbeeld__text">Spiegelbeeld is een <span class="font--bold">muzikaal feest</span> met vooral veel sfeer, ambiance en gezelligheid zoals dat van park- en pleinfeesten verwacht kan worden. De <span class="font--bold">legendarische optredens</span> die in het geheugen van Spiegelbezoekers gegrift zitten, krijgen bij deze een vervolg. Hiermee vullen we een leemte in het programma van de Beverse feesten en presenteren we u – uiteraard in alle bescheidenheid – net dat tikkeltje meer…</p>
-      <a class="btn btn--animated" href="#">Meer info</a>
+      <a class="btn btn--animated spiegelbeeld__btn" href="#">Meer info</a>
       <picture class="spiegelbeeld__image2">
         <source media="(max-width: 767px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_1.webp">
         <source media="(max-width: 1023px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_2.webp">

@@ -301,6 +301,10 @@ main {
   display: grid;
   justify-content: end;
   padding-top: 1rem;
+
+  @media (--xl) {
+    padding-top: 3rem;
+  }
 }
 
 .extra2 {
@@ -546,13 +550,22 @@ main {
     grid-row: 1;
     transform: translateY(18rem);
   }
+
+  @media (--lg) {
+    width: 100%;
+    transform: translateY(13rem);
+  }
+
+  @media (--xl) {
+    width: 75%;
+  }
 }
 
 .spiegelbeeld__container {
   display: grid;
   justify-items: center;
   grid-gap: 2rem;
-  grid-template-rows: 0 repeat(4, auto);
+  grid-template-rows: 0 repeat(5, auto);
   grid-template-columns: 1fr;
 
   @media (--md) {
@@ -563,11 +576,16 @@ main {
 }
 
 .spiegelbeeld__image1 {
-  grid-row: 5;
+  grid-row: 6;
 
   @media (--md) {
     grid-column: 2;
     grid-row: 1;
+    transform: translateY(-2rem);
+  }
+
+  @media (--xl) {
+    transform: translateY(-5rem);
   }
 }
 
@@ -578,6 +596,14 @@ main {
   @media (--md) {
     grid-column: 2;
     grid-row: 2;
+  }
+
+  @media (--lg) {
+    transform: translate(39.2rem, -10rem);
+  }
+
+  @media (--xl) {
+    transform: translate(50.6rem, -45rem);
   }
 }
 
@@ -593,17 +619,42 @@ main {
 .btn {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-yellow);
-  border: .3rem solid var(--color-yellow);
-  padding: 2rem 1.5rem;
+  color: var(--color-purple);
+  padding: 2rem 3.5rem;
   font-size: 2rem;
   font-family: Hind, sans-serif;
   border-radius: 4rem;
   letter-spacing: .05em;
+  border: .3rem solid var(--color-red);
+
+  &::after {
+    background-color: var(--color-red);
+  }
+
+  &:hover {
+    background-color: var(--color-red);
+  }
 }
 
 .spiegelbeeld__btn {
+  grid-row: 5;
+  grid-column: 1;
+
   @media (--md) {
-    transform: translateY(4rem);
+    margin-top: 3rem;
+    margin-bottom: 11rem;
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  @media (--lg) {
+    grid-row: 1;
+    margin-top: 44rem;
+    margin-bottom: 18rem;
+  }
+
+  @media (--xl) {
+    margin-top: 41rem;
+    margin-bottom: 52rem;
   }
 }
