@@ -539,9 +539,12 @@ main {
   }
 }
 
-.spiegelbeeld__text {
+.text {
   font-size: 1.6rem;
   line-height: 1.87;
+}
+
+.spiegelbeeld__text {
   width: 92%;
   grid-row: 4;
 
@@ -577,6 +580,7 @@ main {
 
 .spiegelbeeld__image1 {
   grid-row: 6;
+  z-index: 3;
 
   @media (--md) {
     grid-column: 2;
@@ -590,6 +594,7 @@ main {
 }
 
 .spiegelbeeld__image2 {
+  z-index: 4;
   grid-row: 3;
   grid-column: 1;
 
@@ -657,4 +662,170 @@ main {
     margin-top: 41rem;
     margin-bottom: 52rem;
   }
+}
+
+.festival {
+  background-color: var(--color-blue);
+  transform: translateY(-6rem);
+}
+
+.festival__btn {
+  padding: 1.5rem 3rem;
+  grid-area: festival-btn;
+
+  &::before {
+    content: url(assets/img/icon-inschrijven.png);
+    vertical-align: text-bottom;
+    padding-right: .5rem;
+  }
+
+  @media (--md) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    justify-self: center;
+  }
+}
+
+.extra3 {
+  background-image: url(assets/img/extra3.png);
+  height: 6rem;
+  width: 7rem;
+  background-repeat: no-repeat;
+  grid-area: festival-extra;
+  justify-self: end;
+  transform: translateY(-1rem);
+  z-index: 1;
+
+  @media (--lg) {
+    justify-self: center;
+  }
+}
+
+.extra4 {
+  background-image: url(assets/img/extra4.png);
+  height: 5rem;
+  width: 5rem;
+  background-repeat: no-repeat;
+  grid-area: festival-extra2;
+  justify-self: start;
+  transform: translateY(1rem);
+}
+
+.festival__container {
+  display: grid;
+  grid-template-areas:
+    '.'
+    'festival-title'
+    '.'
+    'festival-img'
+    'festival-extra'
+    '.'
+    'festival-p'
+    '.'
+    'festival-btn'
+    '.'
+    'festival-locatie'
+    '.'
+    'festival-extra2';
+  grid-template-rows: 6rem 9rem auto auto 3rem auto 1fr 2rem auto 3rem;
+
+  @media (--md) {
+    grid-template-rows: 7rem 1fr;
+    grid-template-areas:
+      '.'
+      'festival-img'
+      'festival-extra'
+      '.'
+      'festival-title'
+      '.'
+      'festival-p'
+      '.'
+      'festival-btn'
+      '.'
+      'festival-locatie'
+      '.'
+      'festival-extra2';
+  }
+
+  @media (--lg) {
+    grid-template-columns: 51.2rem 1rem 50.2rem;
+    grid-template-rows: 3rem 8rem 1fr;
+    grid-template-areas:
+      '. . festival-img'
+      'festival-title . festival-img'
+      'festival-p . festival-img'
+      '. . festival-img'
+      '. . festival-img'
+      'festival-btn festival-extra festival-img'
+      '. . festival-img'
+      'festival-locatie . festival-img'
+      'festival-extra2 . festival-img';
+  }
+}
+
+.festival__heading {
+  grid-area: festival-title;
+
+  @media (--md) {
+    width: 43%;
+    padding-bottom: 2rem;
+  }
+
+  @media (--lg) {
+    width: 64%;
+  }
+}
+
+.festival__image {
+  background-image: url(assets/img/festival.jpg);
+  background-repeat: no-repeat;
+  height: 20rem;
+  grid-area: festival-img;
+  z-index: 2;
+
+  @media (--md) {
+    background-image: url(assets/img/festival-md.jpg);
+  }
+
+  @media (--lg) {
+    height: 102.5rem;
+    background-image: url(assets/img/festival-lg.jpg);
+  }
+}
+
+.festival__p {
+  grid-area: festival-p;
+  display: grid;
+  grid-gap: 2rem;
+  justify-items: center;
+  color: var(--color-purple);
+
+  & p {
+    width: 95%;
+
+    @media (--md) {
+      width: 58%;
+    }
+
+    @media (--lg) {
+      width: 81%;
+    }
+  }
+}
+
+.festival__map {
+  grid-area: festival-locatie;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & p {
+    padding-bottom: .5rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.festival__location {
+  border: .2rem solid var(--color-red);
 }
