@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^voorstellingen index.php?page=voorstellingen
+
+RewriteRule ^details index.php?page=details
