@@ -6,33 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>INTERNATIONAAL STRAATFESTIVAL BEVEREN - <?php echo $title; ?></title>
-    <script>
-        WebFontConfig = {
-            custom: {
-                families: ["Montserrat", "Hind"],
-                urls: ["assets/fonts/fonts.css"]
-            }
-        };
 
-        (function(d) {
-            var wf = d.createElement("script"),
-                s = d.scripts[0];
-            wf.src = "js/webfont.js";
-            wf.async = true;
-            s.parentNode.insertBefore(wf, s);
-        })(document);
+    <script>
+    WebFontConfig = {
+        custom: {
+            families: ["Montserrat", "Hind"],
+            urls: ["assets/fonts/fonts.css"]
+        }
+    };
+
+    (function(d) {
+        var wf = d.createElement("script"),
+            s = d.scripts[0];
+        wf.src = "js/webfont.js";
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })(document);
     </script>
+
+    <!--
+    <script>
+    WebFontConfig = {
+        custom: {
+            families: ["Montserrat", "MontserratLight", "Hind"]
+        }
+    };
+
+    (function(d) {
+        var wf = d.createElement("script"),
+            s = d.scripts[0];
+        wf.src =
+            "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+    </script>
+ -->
+
     <?php echo $css;?>
 </head>
 
 <body>
     <h1 class="hidden">Internationaal Straatfestival Beveren</h1>
     <header class="site-header container">
-        <a href="#" class="site__logo"></a>
+        <a href="home" class="site__logo"></a>
         <nav>
             <ul class="site__nav nav--full">
-                <li><a href="#" class="nav__item a--active">Home</a></li>
-                <li><a href="#" class="nav__item">Programma</a></li>
+                <li><a href="home" class="nav__item <?php if($currentPage == 'home') echo 'a--active';?>">Home</a></li>
+                <li>
+                    <a href="voorstellingen"
+                        class="nav__item  <?php if($currentPage == 'voorstellingen') echo 'a--active';?>">
+                        Programma
+                    </a>
+                </li>
                 <li><a href="#" class="nav__item">Praktisch</a></li>
                 <li><a href="#" class="nav__item">Spiegelbeeld</a></li>
                 <li><a href="#" class="nav__item">Vrijwilligers</a></li>

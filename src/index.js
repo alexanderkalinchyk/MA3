@@ -1,4 +1,5 @@
 require('./style.css');
+
 {
   const handleClickHamburger = () => {
     const $sitenav = document.querySelector(`.site__nav`);

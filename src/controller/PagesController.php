@@ -16,8 +16,8 @@ class PagesController extends Controller {
        // $tours = $this->tourDAO->selectAll();  //edit this
        // $this->set('tours', $tours);
 
-        $this->set('title', 'Tours');
-        $this->set('currentPage', 'tours');
+        $this->set('title', 'Voorstellingen');
+        $this->set('currentPage', 'voorstellingen');
     }
     public function index(){
         $this->set('title', 'Home');

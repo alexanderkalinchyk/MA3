@@ -1040,7 +1040,7 @@ a {
   width: 32rem;
 
   @media (--md) {
-    width: 60rem;
+    width: 38rem;
 
     &::before,
     &::after {
