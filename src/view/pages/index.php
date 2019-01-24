@@ -3,7 +3,8 @@
         <section class="main-container container">
             <div class="main-header">
                 <p class="main-header__gratis">Gratis</p>
-                <h1 class="main-header__title">Internationaal Straatfestival Beveren</h1>
+                <h2 class="main-header__title">Internationaal Straatfestival Beveren
+                </h2>
                 <p class="main-header__date">24-25-26 Augustus 2018</p>
                 <p class="main-header__undertitle">
                     Save the date! <br />
@@ -55,14 +56,18 @@
                 <p class="spiegelbeeld__undertitle">Zaterdag 25 augustus op het Oud Atletiekplein</p>
             </div>
             <picture class="spiegelbeeld__image1">
+                <source media="(max-width: 767px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_1.webp"
+                    type="image/webp">
+                <source media="(max-width: 1023px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_2.webp"
+                    type="image/webp">
+                <source media="(max-width: 1439px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_3.webp"
+                    type="image/webp">
+                <source media="(max-width: 1920px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_4.webp"
+                    type="image/webp">
                 <source media="(max-width: 767px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_1.png">
                 <source media="(max-width: 1023px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_2.png">
                 <source media="(max-width: 1439px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_3.png">
                 <source media="(max-width: 1920px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_4.png">
-                <source media="(max-width: 767px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_1.webp">
-                <source media="(max-width: 1023px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_2.webp">
-                <source media="(max-width: 1439px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_3.webp">
-                <source media="(max-width: 1920px)" srcset="assets/img/spiegelbeeld/spiegelbeeld1_4.webp">
                 <img src="assets/img/spiegelbeeld/spiegelbeeld1_4.png"
                     alt="Spiegelbeeld foto 1. 4 bandleden naast elkaar" />
             </picture>
@@ -73,12 +78,15 @@
                 feesten en presenteren we u – uiteraard in alle bescheidenheid – net dat tikkeltje meer…</p>
             <a class="btn btn--animated spiegelbeeld__btn" href="#">Meer info</a>
             <picture class="spiegelbeeld__image2">
+                <source media="(max-width: 767px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_1.webp"
+                    type="image/webp">
+                <source media="(max-width: 1023px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_2.webp"
+                    type="image/webp">
+                <source media="(max-width: 1920px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_3.webp"
+                    type="image/webp">
                 <source media="(max-width: 767px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_1.png">
                 <source media="(max-width: 1023px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_2.png">
                 <source media="(max-width: 1920px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_3.png">
-                <source media="(max-width: 767px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_1.webp">
-                <source media="(max-width: 1023px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_2.webp">
-                <source media="(max-width: 1920px)" srcset="assets/img/spiegelbeeld/spiegelbeeld2_3.webp">
                 <img src="assets/img/spiegelbeeld/spiegelbeeld2_3.png"
                     alt="Spiegelbeeld foto 2. Man staat voor zijn auto. text: 'SENS UNIQUE'" />
             </picture>
@@ -90,36 +98,151 @@
             <div class="festival__image"></div>
             <div class="extra3"></div>
             <div class="festival__p">
-                <p class="text festival__text1">Het 13de Internationaal Straattheaterfestival Beveren vindt plaats op
+                <p class="text">Het 13de Internationaal Straattheaterfestival Beveren vindt plaats op
                     vrijdag
-                    24, zaterdag 25 en zondag 26 augustus 2018 en is <span class="font--bold">volledig gratis</span></p>
-                <p class="text festival__text2">De <span class="font--bold">vaste acts</span> vind je op het Oud
+                    24, zaterdag 25 en zondag 26 augustus 2018 en is <span class="font--bold">volledig gratis</span>
+                </p>
+                <p class="text">De <span class="font--bold">vaste acts</span> vind je op het Oud
                     Atletiekplein in de Diederik Van Beverenlaan en op de speelplaats van KA Beveren/BS De Bever in de
                     Donkvijverstraat. <span class="font--bold">De walking acts</span> en <span
                         class="font--bold">installatieacts</span> vind je langs het parcours in de centrumstraten:
                     Donkvijverstraat, Yzerhand, Vrasenestraat, Warande, Grote Markt en N70.
-                    Humor, (lucht)acrobatie, een vuuract, en stuntwerk van de bovenste plank uit verschillende landen
+                </p>
+                <p class="text">Humor, (lucht)acrobatie, een vuuract, en stuntwerk van de bovenste plank uit
+                    verschillende landen
                     van de
-                    wereld.</p>
-                <p class="text festival__text3">Dit festival is volledig gratis, maar we hebben hulp nodig
+                    wereld.
+                </p>
+                <p class="text">Dit festival is volledig gratis, maar we hebben hulp nodig
                     van de <span class="font--bold">vrijwilligers</span>. Help ons om het beste festival van dit jaar te
-                    organiseren!</p>
+                    organiseren!
+                </p>
             </div>
             <a class="btn btn--animated festival__btn" href="#">Schrijf je hier in</a>
             <div class="festival__map">
                 <p>Alle locaties</p>
                 <picture>
+                    <source media="(max-width: 767px)" srcset="assets/img/festival-map.webp" type="image/webp">
+                    <source media="(max-width: 1439px)" srcset="assets/img/festival-map-md.webp" type="image/webp">
+                    <source media="(max-width: 1920px)" srcset="assets/img/festival-map-xl.webp" type="image/webp">
                     <source media="(max-width: 767px)" srcset="assets/img/festival-map.jpg">
                     <source media="(max-width: 1439px)" srcset="assets/img/festival-map-md.jpg">
                     <source media="(max-width: 1920px)" srcset="assets/img/festival-map-xl.jpg">
-                    <source media="(max-width: 767px)" srcset="assets/img/festival-map.webp">
-                    <source media="(max-width: 1439px)" srcset="assets/img/festival-map-md.webp">
-                    <source media="(max-width: 1920px)" srcset="assets/img/festival-map-xl.webp">
                     <img class="festival__location" src="assets/img/festival-map-xl.jpg"
                         alt="locaties van het festival" />
                 </picture>
             </div>
             <div class="extra4"></div>
+        </div>
+    </section>
+    <section class="lastfestival">
+        <div class="lastfestival__container">
+            <div class="container lastfestival__left">
+                <h2 class="lastfestival__title">Het festival van vorig jaar</h2>
+                <div class="lastfestival__image"></div>
+            </div>
+            <div class="lastfestival__right">
+                <h3 class="lastfestival__h3">2017</h3>
+                <iframe class="lastfestival__video" src="https://www.youtube.com/embed/lrlscBtuSUM" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="container partners__container">
+            <div class="extra5"></div>
+            <h2 class="heading-2 partners__title">Partners</h2>
+            <div class="partners__icons-container">
+                <ul class="partners__icons">
+                    <li>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner1.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner1-md.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner1-lg.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1920px)" srcset="assets/img/partners/partner1-xl.webp"
+                                type="image/webp">
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner1.png">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner1-md.png">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner1-lg.png">
+                            <source media="(max-width: 1920px)" srcset="aassets/img/partners/partner1-xl.png">
+                            <img src="assets/img/partners/partner1-xl.png" alt="Icon van beverse feesten" />
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner2.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner2-md.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner2-lg.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1920px)" srcset="assets/img/partners/partner2-xl.webp"
+                                type="image/webp">
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner2.png">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner2-md.png">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner2-lg.png">
+                            <source media="(max-width: 1920px)" srcset="aassets/img/partners/partner2-xl.png">
+                            <img src="assets/img/partners/partner2-xl.png" alt="Icon van beveren verbindt" />
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner3.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner3-md.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner3-lg.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1920px)" srcset="assets/img/partners/partner3-xl.webp"
+                                type="image/webp">
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner3.png">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner3-md.png">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner3-lg.png">
+                            <source media="(max-width: 1920px)" srcset="aassets/img/partners/partner3-xl.png">
+                            <img src="assets/img/partners/partner3-xl.png" alt="Icon van Warande Beveren" />
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner4.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner4-md.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner4-lg.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1920px)" srcset="assets/img/partners/partner4-xl.webp"
+                                type="image/webp">
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner4.png">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner4-md.png">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner4-lg.png">
+                            <source media="(max-width: 1920px)" srcset="aassets/img/partners/partner4-xl.png">
+                            <img src="assets/img/partners/partner4-xl.png" alt="Icon van Winkel Dorp Beveren" />
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner5.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner5-md.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner5-lg.webp"
+                                type="image/webp">
+                            <source media="(max-width: 1920px)" srcset="assets/img/partners/partner5-xl.webp"
+                                type="image/webp">
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner5.png">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner5-md.png">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner5-lg.png">
+                            <source media="(max-width: 1920px)" srcset="aassets/img/partners/partner5-xl.png">
+                            <img src="assets/img/partners/partner5-xl.png" alt="Icon van Horeca Vlaanderen" />
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+            <div class="extra6"></div>
         </div>
     </section>
 </main>
