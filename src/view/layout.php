@@ -44,7 +44,7 @@
     <?php echo $content; ?>
     <footer class="footer">
         <div class="footer--big">
-            <article class="footer__article">
+            <article class="container footer__article">
                 <h3 class="footer__h3">
                     <div class="icon-location"></div> Locaties Voorstellingen
                 </h3>
@@ -53,19 +53,19 @@
                     De speelplaats van BS De Bever en KA Beveren in de Donkvijverstraat.
                 </address>
             </article>
-            <article class="footer__article">
+            <article class="container footer__article">
                 <h3 class="footer__h3">
                     <div class="icon-location"></div> Locaties Straatacts
                 </h3>
-                <address class="text">
+                <address class="text address2">
                     Donkvijverstraat, Yzerhand, Vrasenestraat, Warande, N70 en op de Grote Markt.
                 </address>
             </article>
             <article class="footer__article">
                 <h3 class="footer__h3 no-width">Volg Ons</h3>
-                <button class="btn-follow">
+                <a href="https://www.facebook.com/straattheaterfestivalbeveren/" target="_blank" class="btn-follow">
                     <div class="icon-fb"></div>Follow
-                </button>
+                </a>
                 <div class="icon-mail1"></div>
                 <p class="text--inschrijven">Schrijf je in voor onze nieuwsbrief</p>
                 <div class="email__div">
