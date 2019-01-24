@@ -4,6 +4,7 @@
 
 body {
   font-family: Montserrat, sans-serif;
+  height: 100%;
 }
 
 main {
@@ -138,7 +139,6 @@ main {
 }
 
 .cta-btn {
-  text-decoration: none;
   text-transform: uppercase;
   color: var(--color-yellow);
   border: .3rem solid var(--color-yellow);
@@ -201,6 +201,10 @@ main {
   @media (--lg) {
     width: 17%;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 .scroll {
@@ -339,28 +343,20 @@ main {
   text-transform: uppercase;
   letter-spacing: .1em;
   line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &::before,
   &::after {
-    background-color: var(--color-red);
     content: '';
-    display: inline-block;
-    height: .2rem;
-    position: relative;
-    vertical-align: middle;
-    width: 50%;
-  }
-
-  &::before {
-    right: 2rem;
-    margin-left: -50%;
-    transform: translateY(1rem);
+    border-top: 2px solid var(--color-red);
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
   }
 
   &::after {
-    left: 2rem;
-    margin-right: -50%;
-    transform: translateY(-1rem);
+    margin: 0 0 0 20px;
   }
 
   @media (--md) {
@@ -624,7 +620,6 @@ main {
 }
 
 .btn {
-  text-decoration: none;
   text-transform: uppercase;
   color: var(--color-purple);
   padding: 2rem 3.5rem;
@@ -777,13 +772,24 @@ main {
 .festival__heading {
   grid-area: festival-title;
 
+  &::before,
+  &::after {
+    content: none;
+  }
+
   @media (--md) {
-    width: 43%;
+    width: 55%;
     padding-bottom: 2rem;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1 0 5rem;
+    }
   }
 
   @media (--lg) {
-    width: 64%;
+    width: 82%;
   }
 }
 
@@ -1030,6 +1036,35 @@ main {
   }
 }
 
+.top-voorstellingen__title {
+  width: 32rem;
+
+  @media (--md) {
+    width: 38rem;
+
+    &::before,
+    &::after {
+      flex: 1 0 5rem;
+    }
+  }
+}
+
+.partners__title {
+  width: 80%;
+
+  @media (--md) {
+    width: 35%;
+  }
+
+  @media (--lg) {
+    width: 30%;
+  }
+
+  @media (--xl) {
+    width: 20%;
+  }
+}
+
 .extra5 {
   background-image: url(assets/img/extra5.png);
   height: 5rem;
@@ -1150,16 +1185,20 @@ main {
   }
 }
 
-.footer--small {
-  background-color: var(--color-violet);
-}
-
 .footer {
   transform: translateY(-11rem);
   color: var(--color-purple);
   z-index: 1;
   position: relative;
   font-weight: 200;
+
+  @media (--md) {
+    transform: translateY(-14rem);
+  }
+
+  @media (--xl) {
+    transform: translateY(-47rem);
+  }
 }
 
 .icon-location {
@@ -1192,7 +1231,6 @@ main {
 }
 
 .btn-follow {
-  text-decoration: none;
   width: 16rem;
   height: 4rem;
   background: transparent;
@@ -1234,7 +1272,6 @@ main {
   background-color: var(--color-violet);
   color: var(--color-yellow);
   font-size: 1.8rem;
-  text-decoration: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1267,5 +1304,58 @@ main {
     content: url(assets/img/icon-mail2.png);
     vertical-align: text-bottom;
     padding-left: .5rem;
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+
+  & a {
+    font-size: 1.6rem;
+    color: var(--color-white);
+    padding: .5rem 0;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+
+  @media (--md) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.copyright {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer--small {
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.footer__border {
+  height: 2rem;
+  border-bottom: .2rem solid var(--color-red);
+  width: 25rem;
+  margin: 0 auto;
+
+  @media (--md) {
+    width: 68rem;
+  }
+
+  @media (--lg) {
+    width: 83rem;
+  }
+
+  @media (--xl) {
+    width: 85%;
   }
 }

@@ -28,10 +28,10 @@
     </div>
     <section class="top-voorstellingen">
         <div class="extra1"></div>
-        <h2 class="heading-2">Niet te missen voorstellingen</h2>
+        <h2 class="heading-2 top-voorstellingen__title">Niet te missen voorstellingen</h2>
         <div class="scrolling-wrapper">
             <?php foreach($top_voorstellingen as $voorstelling){ ?>
-            <a class="top__article <?php echo $voorstelling["class"];?>">
+            <a href="" class="top__article <?php echo $voorstelling["class"];?>">
                 <div class="top__container">
                     <h3 class="top__title"><?php echo $voorstelling["name"];?></h3>
                     <p class="font--bold"><?php echo $voorstelling["country"];?></p>

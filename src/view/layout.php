@@ -37,7 +37,9 @@
                 <li><a href="#" class="nav__item">Spiegelbeeld</a></li>
                 <li><a href="#" class="nav__item">Vrijwilligers</a></li>
                 <li><a href="#" class="nav__item">Contact</a></li>
-                <li class=""><span class="hamburger" href="#">H</span></li>
+                <li>
+                    <div class="hamburger"></div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -84,24 +86,14 @@
                 <a class="btn-inschrijven btn-contacteer" href="#">Contacteer ons</a>
             </article>
         </div>
-        <div class="footer-small">
-            <nav class="footer__nav">
-                <ul class="site__nav nav--full">
-                    <li><a href="#" class="nav__item a--active">Home</a></li>
-                    <li><a href="#" class="nav__item">Programma</a></li>
-                    <li><a href="#" class="nav__item">Praktisch</a></li>
-                    <li><a href="#" class="nav__item">Spiegelbeeld</a></li>
-                    <li><a href="#" class="nav__item">Vrijwilligers</a></li>
-                    <li><a href="#" class="nav__item">Contact</a></li>
-                    <li class=""><span class="hamburger" href="#">H</span></li>
-                </ul>
-            </nav>
-            <div class="">
-                <a href="#">Algemene Voorwaarden</a>
+        <div class="footer--small">
+            <div class="footer__links">
                 <a href="#">Cookie Statement</a>
                 <a href="#">Privacy-beleid</a>
+                <a href="#">Algemene Voorwaarden</a>
             </div>
-            <span>&copy; 2019 Alexander Kalinchyk</span>
+            <div class="footer__border"></div>
+            <span class="copyright">&copy; 2019 Alexander Kalinchyk</span>
         </div>
 
     </footer>

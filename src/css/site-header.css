@@ -10,7 +10,7 @@
   padding: 1.5rem 2rem;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 11rem 1fr auto;
+  grid-template-columns: 1fr 1fr;
   transform: translateY(1.5rem);
 
   @media (--sm) {
@@ -19,11 +19,13 @@
 
   @media (--md) {
     width: 70rem;
+    grid-template-columns: 20rem 1fr auto;
   }
 
   @media (--lg) {
     grid-gap: 0;
     width: 95rem;
+    grid-template-columns: 11rem 1fr auto;
   }
 
   @media (--xl) {
@@ -33,7 +35,7 @@
 }
 
 .site-header--responsive {
-  height: 30rem;
+  height: 32rem;
   margin-top: 0;
   max-width: 102.4rem;
 }
@@ -46,11 +48,18 @@
   justify-self: center;
 }
 
+.hamburger {
+  background: url(../assets/img/hamburger.png) no-repeat;
+  width: 4rem;
+  height: 4rem;
+}
+
 .site__nav {
   display: grid;
   grid-template-columns: repeat(6, auto);
   grid-template-rows: 1fr;
   justify-items: center;
+  align-items: center;
 
   & a {
     text-decoration: none;
@@ -73,11 +82,13 @@
 
     & li:last-child {
       display: inline;
+      padding-left: 2rem;
     }
   }
 
   @media (--md) {
 
+    & li:nth-child(1),
     & li:nth-child(2),
     & li:nth-child(3) {
       display: inline;
@@ -124,7 +135,8 @@
   }
 
   & .hamburger {
-    display: inline;
+    background: url(../assets/img/cross.png) no-repeat;
+    display: block;
   }
 }
 
