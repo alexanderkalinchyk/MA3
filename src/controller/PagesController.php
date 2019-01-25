@@ -12,13 +12,6 @@ class PagesController extends Controller {
      //   $this->tourDAO = new TourDAO();
      $this->voorstellingDAO = new VoorstellingDAO();
     }
-    public function voorstellingen(){
-       // $tours = $this->tourDAO->selectAll();  //edit this
-       // $this->set('tours', $tours);
-
-        $this->set('title', 'Voorstellingen');
-        $this->set('currentPage', 'voorstellingen');
-    }
     public function index(){
         $this->set('title', 'Home');
         $this->set('currentPage', 'home');

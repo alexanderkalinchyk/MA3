@@ -75,45 +75,71 @@
     </section>
     <section class="voorstelling__days">
         <div class="move-container">
-            <h2 class="heading-2">Vrijdag</h2>
+            <?php
+            $friday = true;
+            $saturday = true;
+            $sunday = true;
+            foreach($shows as $show){
+            if($show['day'] == 'Vrijdag' && $friday == true){   ?>
+            <h2 class="heading-2 show__h2">Vrijdag</h2>
+            <?php
+              $friday = false;
+            }
+            if($show['day'] == 'Zaterdag' && $saturday == true){   ?>
+            <h2 class="heading-2 show__h2">Zaterdag</h2>
+            <?php
+            $saturday = false; }
+            if($show['day'] == 'Zondag' && $sunday == true){   ?>
+            <h2 class="heading-2 show__h2">Zondag</h2>
+            <?php
+              $sunday = false; }
+            ?>
             <article class="show__article">
                 <div class="show__heading">
-                    <h3 class="show__title">The Flying Dutchmen</h3>
-                    <p class="show__undertitle">The sky is the limit (NL/CAN)</p>
+                    <h3 class="show__title"><?php echo $show['name']; ?></h3>
+                    <p class="show__undertitle"><?php echo $show['performance']; ?> <?php echo $show['country']; ?></p>
                 </div>
                 <div class="show__image-container">
                     <picture>
                         <source media="(max-width: 767px)"
-                            srcset="assets/img/thumbnails_mobile/ciedescieuxgalvanises.webp" type="image/webp">
+                            srcset="assets/img/thumbnails_mobile/<?php echo $show['img']; ?>.webp" type="image/webp">
                         <source media="(max-width: 3840px)"
-                            srcset="assets/img/thumbnails_desktop/ciedescieuxgalvanises.webp" type="image/webp">
+                            srcset="assets/img/thumbnails_desktop/<?php echo $show['img']; ?>.webp" type="image/webp">
                         <source media="(max-width: 767px)"
-                            srcset="assets/img/thumbnails_mobile/ciedescieuxgalvanises.jpg">
+                            srcset="assets/img/thumbnails_mobile/<?php echo $show['img']; ?>.jpg">
                         <source media="(max-width: 3840px)"
-                            srcset="assets/img/thumbnails_desktop/ciedescieuxgalvanises.jpg">
-                        <img class="show__image" src="assets/img/thumbnails_desktop/ciedescieuxgalvanises.jpg" alt="" />
+                            srcset="assets/img/thumbnails_desktop/<?php echo $show['img']; ?>.jpg">
+                        <img class="show__image" src="assets/img/thumbnails_desktop/<?php echo $show['img']; ?>.jpg"
+                            alt="" />
                     </picture>
                 </div>
                 <div class="show__info">
                     <ul>
+                        <?php if(!is_null($show['start_hour'])){ ?>
                         <li class="show__list">
-                            <div class="show__clock"></div> 18:00 - 18:40 (40min.)
+                            <div class="show__clock"></div> <?php echo substr($show['start_hour'], 0, -3);?> -
+                            <?php echo substr($show['end_hour'], 0, -3);?>
+                            (<?php echo $show['min_duration'];?>min.)
+                        </li>
+                        <?php } ?>
+                        <li class="show__list">
+                            <div class="show__location"></div> <?php echo $show['location'];?>
                         </li>
                         <li class="show__list">
-                            <div class="show__location"></div> Locatie 1: KA / BS De Bever
+                            <div class="show__type"></div> <?php echo $show['type'];?>
                         </li>
-                        <li class="show__list">
-                            <div class="show__type"></div> Voorstelling
+                        <?php if(!empty($show['website'])){ ?>
+                        <li class="show__list show__web">
+                            <div class="show__website"></div> <a class="show__link"> <?php echo $show['website'];?></a>
                         </li>
-                        <li class="show__list">
-                            <div class="show__website"></div><a class="show__link"> www.the-flying-dutchmen.com</a>
-                        </li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <div>
-                    <a href="#" class="btn btn--animated show__btn">Meer info</a>
+                    <a href="details?id=<?php echo $show['id'];?>" class="btn btn--animated show__btn">Meer info</a>
                 </div>
             </article>
+            <?php } ?>
         </div>
     </section>
 </main>

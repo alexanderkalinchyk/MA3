@@ -40,6 +40,12 @@ class VoorstellingDAO extends DAO {
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
+  public function selectAllShows() {
+    $sql = "SELECT * FROM `ma3_voorstellingen` ORDER BY `day`";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
   public function selectById($id){
     $sql = "SELECT * FROM `players` WHERE `Id` = :id";
     $stmt = $this->pdo->prepare($sql);

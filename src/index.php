@@ -9,7 +9,7 @@ $routes = array(
     'action' => 'index'
   ),
   'voorstellingen' => array(
-      'controller' => 'Pages',
+      'controller' => 'Voorstellingen',
       'action' => 'voorstellingen'
   ),
   'details' => array(

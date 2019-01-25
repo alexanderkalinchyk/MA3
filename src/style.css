@@ -1550,7 +1550,7 @@ a {
 }
 
 .move-container {
-  transform: translateY(-24rem);
+  transform: translateY(-26rem);
 }
 
 .show__article {
@@ -1596,6 +1596,7 @@ a {
   font-weight: 200;
   font-size: 1.6rem;
   margin-bottom: 1rem;
+  width: 92%;
 }
 
 .show__list {
@@ -1604,12 +1605,16 @@ a {
   align-items: center;
 }
 
+.show__web {
+  font-size: 1.4rem;
+}
+
 .show__clock,
 .show__location,
 .show__type,
 .show__website {
   width: 3rem;
-  height: 3rem;
+  height: 2.5rem;
 }
 
 .show__clock {
@@ -1626,4 +1631,8 @@ a {
 
 .show__website {
   background: url(assets/img/show-website.png) no-repeat;
+}
+
+.show__h2 {
+  padding: 3rem 0;
 }
