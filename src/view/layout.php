@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>INTERNATIONAAL STRAATFESTIVAL BEVEREN - <?php echo $title; ?></title>
 
-
+    <!--
     <script>
     WebFontConfig = {
         custom: {
@@ -24,12 +24,13 @@
         s.parentNode.insertBefore(wf, s);
     })(document);
     </script>
+ -->
 
-    <!--
     <script>
     WebFontConfig = {
         custom: {
-            families: ["Montserrat", "Hind"]
+            families: ["Montserrat", "Hind"],
+            urls: ["assets/fonts/fonts.css"]
         }
     };
 
@@ -42,7 +43,7 @@
         s.parentNode.insertBefore(wf, s);
     })(document);
     </script>
- -->
+
 
     <?php echo $css;?>
 </head>
