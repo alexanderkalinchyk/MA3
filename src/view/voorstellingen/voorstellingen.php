@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="submit-container">
                         <button type="submit" class="btn--animated btn btn-save">Opslaan</button>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                         <?php } ?>
                     </ul>
                 </div>
-                <div>
+                <div class="info-container">
                     <a href="details?id=<?php echo $show['id'];?>" class="btn btn--animated show__btn">Meer info</a>
                 </div>
             </article>

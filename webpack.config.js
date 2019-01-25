@@ -1,4 +1,3 @@
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -32,6 +31,14 @@ module.exports = (env, {mode}) => {
               context: './src',
               name: '[path][name].[ext]'
             }
+          }
+        },
+        {
+          test: /\.(woff(2)?|ttf|eot)$/,
+          loader: `file-loader`,
+          options: {
+            context: './src',
+            name: '[path][name].[ext]'
           }
         },
         {

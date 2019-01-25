@@ -149,7 +149,7 @@
                 </iframe> -->
                 <div class="lastfestival__video">
                     <embed
-                        src="http://www.youtube.com/v/lrlscBtuSUM?version=3&amp;hl=en_US&amp;rel=0&amp;autohide=1&amp;autoplay=1"
+                        src="http://www.youtube.com/v/lrlscBtuSUM?version=3&amp;hl=en_US&amp;rel=0&amp;autohide=1&amp;autoplay=0"
                         wmode="transparent" type="application/x-shockwave-flash" width="100%" height="100%"
                         allowfullscreen="true" title="Adobe Flash Player">
                 </div>
@@ -172,11 +172,11 @@
                                 type="image/webp">
                             <source media="(max-width: 3840px)" srcset="assets/img/partners/partner1-xl.webp"
                                 type="image/webp">
-                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner1.png">
-                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner1-md.png">
-                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner1-lg.png">
-                            <source media="(max-width: 3840px)" srcset="aassets/img/partners/partner1-xl.png">
-                            <img src="assets/img/partners/partner1-xl.png" alt="Icon van beverse feesten" />
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner1.jpg">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner1-md.jpg">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner1-lg.jpg">
+                            <source media="(max-width: 3840px)" srcset="assets/img/partners/partner1-xl.jpg">
+                            <img src="assets/img/partners/partner1-xl.jpg" alt="Icon van beverse feesten" />
                         </picture>
                     </li>
                     <li>
@@ -189,11 +189,11 @@
                                 type="image/webp">
                             <source media="(max-width: 3840px)" srcset="assets/img/partners/partner2-xl.webp"
                                 type="image/webp">
-                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner2.png">
-                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner2-md.png">
-                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner2-lg.png">
-                            <source media="(max-width: 3840px)" srcset="aassets/img/partners/partner2-xl.png">
-                            <img src="assets/img/partners/partner2-xl.png" alt="Icon van beveren verbindt" />
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner2.jpg">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner2-md.jpg">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner2-lg.jpg">
+                            <source media="(max-width: 3840px)" srcset="assets/img/partners/partner2-xl.jpg">
+                            <img src="assets/img/partners/partner2-xl.jpg" alt="Icon van beveren verbindt" />
                         </picture>
                     </li>
                     <li>
@@ -206,11 +206,11 @@
                                 type="image/webp">
                             <source media="(max-width: 3840px)" srcset="assets/img/partners/partner3-xl.webp"
                                 type="image/webp">
-                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner3.png">
-                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner3-md.png">
-                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner3-lg.png">
-                            <source media="(max-width: 3840px)" srcset="aassets/img/partners/partner3-xl.png">
-                            <img src="assets/img/partners/partner3-xl.png" alt="Icon van Warande Beveren" />
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner3.jpg">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner3-md.jpg">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner3-lg.jpg">
+                            <source media="(max-width: 3840px)" srcset="assets/img/partners/partner3-xl.jpg">
+                            <img src="assets/img/partners/partner3-xl.jpg" alt="Icon van Warande Beveren" />
                         </picture>
                     </li>
                     <li>
@@ -223,11 +223,11 @@
                                 type="image/webp">
                             <source media="(max-width: 3840px)" srcset="assets/img/partners/partner4-xl.webp"
                                 type="image/webp">
-                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner4.png">
-                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner4-md.png">
-                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner4-lg.png">
-                            <source media="(max-width: 3840px)" srcset="aassets/img/partners/partner4-xl.png">
-                            <img src="assets/img/partners/partner4-xl.png" alt="Icon van Winkel Dorp Beveren" />
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner4.jpg">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner4-md.jpg">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner4-lg.jpg">
+                            <source media="(max-width: 3840px)" srcset="assets/img/partners/partner4-xl.jpg">
+                            <img src="assets/img/partners/partner4-xl.jpg" alt="Icon van Winkel Dorp Beveren" />
                         </picture>
                     </li>
                     <li>
@@ -240,11 +240,11 @@
                                 type="image/webp">
                             <source media="(max-width: 3840px)" srcset="assets/img/partners/partner5-xl.webp"
                                 type="image/webp">
-                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner5.png">
-                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner5-md.png">
-                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner5-lg.png">
-                            <source media="(max-width: 3840px)" srcset="aassets/img/partners/partner5-xl.png">
-                            <img src="assets/img/partners/partner5-xl.png" alt="Icon van Horeca Vlaanderen" />
+                            <source media="(max-width: 767px)" srcset="assets/img/partners/partner5.jpg">
+                            <source media="(max-width: 1023px)" srcset="assets/img/partners/partner5-md.jpg">
+                            <source media="(max-width: 1439px)" srcset="assets/img/partners/partner5-lg.jpg">
+                            <source media="(max-width: 3840px)" srcset="assets/img/partners/partner5-xl.jpg">
+                            <img src="assets/img/partners/partner5-xl.jpg" alt="Icon van Horeca Vlaanderen" />
                         </picture>
                     </li>
                 </ul>
