@@ -18,9 +18,4 @@ class PagesController extends Controller {
         $top_voorstellingen = $this->voorstellingDAO->selectAllTop();
         $this->set('top_voorstellingen', $top_voorstellingen);
     }
-    public function details(){
-        $this->set('title', 'Praktische Informatie');
-        $this->set('currentPage', 'praktisch');
-    }
-
 }

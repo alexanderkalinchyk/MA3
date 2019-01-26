@@ -46,6 +46,13 @@ class VoorstellingDAO extends DAO {
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
+  public function selectDetailsById($id){
+    $sql = "SELECT * FROM `ma3_voorstellingen` WHERE `Id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
   public function selectById($id){
     $sql = "SELECT * FROM `players` WHERE `Id` = :id";
     $stmt = $this->pdo->prepare($sql);

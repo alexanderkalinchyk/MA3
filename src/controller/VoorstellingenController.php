@@ -20,5 +20,17 @@ class VoorstellingenController extends Controller {
         $shows = $this->voorstellingDAO->selectAllShows();
         $this->set('shows', $shows);
     }
+    public function details(){
+         $this->set('currentPage', 'details');
+
+         if (!empty($_GET['id'])) {
+          $detail = $this->voorstellingDAO->selectDetailsById($_GET['id']);
+          $this->set('detail', $detail);
+
+          $this->set('title', strtoupper ($detail['name']));
+         }
+
+
+     }
 
 }

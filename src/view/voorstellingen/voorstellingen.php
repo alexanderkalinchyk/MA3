@@ -147,8 +147,10 @@
                             </ul>
                         </div>
                         <div class="info-container">
-                            <a href="details?id=<?php echo $show['id'];?>" class="btn btn--animated show__btn">Meer
-                                info</a>
+                            <a href="index.php?page=details&amp;id=<?php echo $show['id'];?>"
+                                class="btn btn--animated show__btn">Meer
+                                info
+                            </a>
                         </div>
                     </article>
                     <?php } ?>
