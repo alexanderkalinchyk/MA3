@@ -30,7 +30,7 @@
     WebFontConfig = {
         custom: {
             families: ["Montserrat", "Hind"],
-            urls: ["assets/fonts/fonts.css"]
+            urls: ["style.css"]
         }
     };
 
