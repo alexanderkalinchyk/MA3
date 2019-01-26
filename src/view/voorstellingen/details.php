@@ -12,7 +12,8 @@
                 <source media="(max-width: 767px)" srcset="assets/img/details_mobile/<?php echo $detail['img']; ?>.jpg">
                 <source media="(max-width: 3840px)"
                     srcset="assets/img/details_desktop/<?php echo $detail['img']; ?>.jpg">
-                <img class="details__image" src="assets/img/details_desktop/<?php echo $detail['img']; ?>.jpg" alt="" />
+                <img class="details__image" src="assets/img/details_desktop/<?php echo $detail['img']; ?>.jpg"
+                    alt="<?php echo $detail['alt']; ?>" />
             </picture>
         </div>
         <article>
@@ -58,28 +59,49 @@
                 </div>
                 <div class="extra9"></div>
             </div>
-
+            <?php if(!empty($detail['youtube'])){ ?>
             <div class="details__video">
                 <embed
                     src="http://www.youtube.com/v/<?php echo $detail['youtube'];?>?version=3&amp;hl=en_US&amp;rel=0&amp;autohide=1&amp;autoplay=0"
                     wmode="transparent" type="application/x-shockwave-flash" width="100%" height="100%"
                     allowfullscreen="true" title="Adobe Flash Player">
             </div>
-            <div>
+            <div class="details__map">
                 <h3 class="heading-2 show__h2">Locatie</h3>
                 <div class="map-container">
-
+                    <span class="cord1 hidden"><?php echo $detail['lat'];?></span>
+                    <span class="cord2 hidden"><?php echo $detail['lng'];?></span>
+                    <div id="map" class="google-map"></div>
+                    <!-- Replace the value of the key parameter with your own API key. -->
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZnxQFSxp7tbhA0JtzC2qod5Z7nzOQq4w">
+                    </script>
                 </div>
                 <div class="extra10"></div>
             </div>
+            <?php } ?>
         </article>
     </section>
     <section class="other-shows">
-        <h2 class="heading-2 show__h2">Andere Voorstellingen</h2>
-        <article class="other-shows__article scrolling-wrapper">
-            <img>
-            <h3>Kunst op stelten</h3>
-            <p>Zaterdag 25/08</p>
-        </article>
+        <h2 class="heading-2">Andere Voorstellingen</h2>
+        <div class="scrolling-wrapper andere__wrapper">
+            <?php foreach($others as $andere){  ?>
+            <article class="other-shows__article">
+                <picture>
+                    <source media="(max-width: 3840px)"
+                        srcset="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.webp" type="image/webp">
+                    <source media="(max-width: 3840px)"
+                        srcset="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.jpg">
+                    <img class="" src="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.jpg"
+                        alt="<?php echo $andere['alt']; ?>" />
+                </picture>
+                <h3 class="andere__h3"><?php echo $andere['name']; ?></h3>
+                <?php
+                  $originalDate2 = $andere['date'];
+                  $newDate2 = date("d/m", strtotime($originalDate2));
+                ?>
+                <p class="andere__p"><?php echo $andere['day']; ?> <?php echo $newDate2; ?></p>
+            </article>
+            <?php } ?>
+        </div>
     </section>
 </main>

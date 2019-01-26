@@ -27,9 +27,11 @@ class VoorstellingenController extends Controller {
           $detail = $this->voorstellingDAO->selectDetailsById($_GET['id']);
           $this->set('detail', $detail);
 
+          $others = $this->voorstellingDAO->selectOthers();
+          $this->set('others', $others);
+
           $this->set('title', strtoupper ($detail['name']));
          }
-
 
      }
 

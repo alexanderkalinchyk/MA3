@@ -46,6 +46,12 @@ class VoorstellingDAO extends DAO {
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
+  public function selectOthers() {
+    $sql = "SELECT * FROM ma3_voorstellingen ORDER BY RAND() LIMIT 3";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
   public function selectDetailsById($id){
     $sql = "SELECT * FROM `ma3_voorstellingen` WHERE `Id` = :id";
     $stmt = $this->pdo->prepare($sql);

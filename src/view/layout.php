@@ -72,8 +72,9 @@
         </nav>
     </header>
     <?php echo $content; ?>
-    <!--
-    <footer class="footer <?php if($currentPage == 'home') echo 'footer-home';?>">
+
+    <footer
+        class="footer <?php if($currentPage == 'home') echo 'footer-home'; if($currentPage == 'details') echo 'footer-details';?>">
         <div class="footer--big">
             <article class="container footer__article">
                 <h3 class="footer__h3">
@@ -125,7 +126,7 @@
             <span class="copyright">&copy; 2019 Alexander Kalinchyk</span>
         </div>
 
-    </footer> -->
+    </footer>
     <?php echo $js; ?>
 </body>
 

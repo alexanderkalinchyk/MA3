@@ -119,7 +119,8 @@
                                 <source media="(max-width: 3840px)"
                                     srcset="assets/img/thumbnails_desktop/<?php echo $show['img']; ?>.jpg">
                                 <img class="show__image"
-                                    src="assets/img/thumbnails_desktop/<?php echo $show['img']; ?>.jpg" alt="" />
+                                    src="assets/img/thumbnails_desktop/<?php echo $show['img']; ?>.jpg"
+                                    alt="<?php echo $show['alt']; ?>" />
                             </picture>
                         </div>
                         <div class="show__info">

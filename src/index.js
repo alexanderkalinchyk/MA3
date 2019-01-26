@@ -14,10 +14,34 @@ require('./style.css');
       $siteheader.className = `site-header container`;
     }
   };
-
+  const initgoogle = () => {
+    const $googlemap = document.querySelector(`.google-map`);
+    if ($googlemap !== null) {
+      const cord1 = parseFloat(document.querySelector(`.cord1`).textContent);
+      const cord2 = parseFloat(document.querySelector(`.cord2`).textContent);
+      const uluru = {
+        //put coordinates in html with php
+        //select query text
+        //enter here
+        //200 iq idea
+        lat: cord1,
+        lng: cord2
+      };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: uluru
+      });
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  };
   const init = () => {
     const $hamburger = document.querySelector(`.hamburger`);
     $hamburger.addEventListener(`click`, handleClickHamburger);
+
+    initgoogle();
   };
 
   /*
