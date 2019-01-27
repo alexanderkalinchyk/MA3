@@ -1790,7 +1790,8 @@ a {
 }
 
 .move-container {
-  transform: translateY(-26rem);
+  transform: translateY(-35rem);
+  margin-bottom: -30rem;
 
   @media (--md) {
     transform: translateY(-35rem);
@@ -2206,4 +2207,52 @@ a {
 
 .footer-details {
   transform: translateY(-7rem);
+}
+
+.checkbox {
+  position: relative;
+  margin: 0 1rem .5rem 0;
+
+  cursor: pointer;
+
+  &::before {
+    transition: all .2s ease-in-out;
+
+    content: '';
+
+    position: absolute;
+    z-index: 1;
+
+    width: 2rem;
+    height: 2rem;
+
+    border: 2px solid #f2f2f2;
+  }
+
+  &:checked {
+
+    &::before {
+      transform: rotate(-45deg);
+
+      height: 2rem;
+      width: 1.5rem;
+      border-color: var(--color-purple);
+      border-top-style: none;
+      border-right-style: none;
+    }
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+
+    width: 2rem;
+    height: 2rem;
+
+    background: var(--color-white);
+
+    cursor: pointer;
+  }
 }

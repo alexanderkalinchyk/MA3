@@ -45,12 +45,13 @@
                                 <span class="filter-title title-voorstellingen">Voorstellingen</span>
                                 <div class="voorstellingen-inputs">
                                     <input value="Voorstelling" <?php if(isset($checkedtype1)) echo $checkedtype1; ?>
-                                        type="checkbox" name="type[]" id="voorstellingen"><label for="voorstellingen"
-                                        class="label">Voorstellingen</label>
-                                    <input value="Straatact" <?php if(isset($checkedtype2)) echo $checkedtype2; ?>
-                                        type="checkbox" name="type[]" id="straatacts"><label for="straatacts"
+                                        type="checkbox" class="checkbox" name="type[]" id="voorstellingen"><label
+                                        for="voorstellingen" class="label">Voorstellingen</label>
+                                    <input value="Straatact" class="checkbox"
+                                        <?php if(isset($checkedtype2)) echo $checkedtype2; ?> type="checkbox"
+                                        name="type[]" id="straatacts"><label for="straatacts"
                                         class="label">Straatacts</label>
-                                    <input value="Familie Voorstelling"
+                                    <input value="Familie Voorstelling" class="checkbox"
                                         <?php if(isset($checkedtype3)) echo $checkedtype3; ?> type="checkbox"
                                         name="type[]" id="familievoorstellingen"><label for="familievoorstellingen"
                                         class="label">Familievoorstellingen</label>
