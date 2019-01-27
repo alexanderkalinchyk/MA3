@@ -4,36 +4,45 @@ require_once( __DIR__ . '/DAO.php');
 
 class VoorstellingDAO extends DAO {
 
-  public function search($max=10, $name = '', $nationality = ''){
-    $sql = "SELECT * FROM `players` WHERE 1";
+  public function search($name, $day, $type1, $type2, $type3, $order){
+    $sql = "SELECT * FROM `ma3_voorstellingen` WHERE 1";
 
     if (!empty($name)) {
-      $sql .= " AND `Name` LIKE :name";
+      $sql .= " AND `name` LIKE :name";
     }
-    if (!empty($nationality)) {
-      $sql .= " AND `Nationality` = :nationality";
+    if (!empty($day)) {
+      $sql .= " AND `day` = :dag";
     }
 
-    $sql .= " ORDER BY `Overall` DESC LIMIT :max";
+    $sql .= " AND ( `type` = ''";
+
+    if (!empty($type1)) { $sql .= " OR `type` = :type1"; }
+    if (!empty($type2)) { $sql .= " OR `type` = :type2"; }
+    if (!empty($type3)) { $sql .= " OR `type` = :type3"; }
+
+    $sql .= ")";
+
+    $sql .= " ORDER BY day ASC, start_hour $order";
+
 
     $stmt = $this->pdo->prepare($sql);
     if (!empty($name)) {
       $stmt->bindValue(':name','%'.$name.'%');
     }
-    if (!empty($nationality)) {
-      $stmt->bindValue(':nationality', $nationality);
+
+    if (!empty($day)) {
+      $stmt->bindValue(':dag', $day);
     }
-    $stmt->bindValue(':max', $max);
+
+    if (!empty($type1)) { $stmt->bindValue(':type1', $type1); }
+    if (!empty($type2)) { $stmt->bindValue(':type2', $type2); }
+    if (!empty($type3)) { $stmt->bindValue(':type3', $type3); }
+
+
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function selectAllCountries() {
-    $sql = "SELECT DISTINCT `Nationality` FROM `players` ORDER BY `Nationality` ASC";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  }
   public function selectAllTop() {
     $sql = "SELECT * FROM `ma3_top_voorstellingen`";
     $stmt = $this->pdo->prepare($sql);
@@ -41,7 +50,7 @@ class VoorstellingDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
   public function selectAllShows() {
-    $sql = "SELECT * FROM `ma3_voorstellingen` ORDER BY `day`";
+    $sql = "SELECT * FROM `ma3_voorstellingen` WHERE `day` = 'Vrijdag' ORDER BY `day`";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -59,13 +68,5 @@ class VoorstellingDAO extends DAO {
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
-  public function selectById($id){
-    $sql = "SELECT * FROM `players` WHERE `Id` = :id";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':id', $id);
-    $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
-  }
-
 
 }

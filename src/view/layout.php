@@ -56,7 +56,7 @@
             <ul class="site__nav nav--full">
                 <li><a href="home" class="nav__item <?php if($currentPage == 'home') echo 'a--active';?>">Home</a></li>
                 <li>
-                    <a href="voorstellingen"
+                    <a href="index.php?page=voorstellingen"
                         class="nav__item  <?php if($currentPage == 'voorstellingen') echo 'a--active';?>">
                         Programma
                     </a>

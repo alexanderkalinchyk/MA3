@@ -2,8 +2,7 @@
     <div class="background--blue"></div>
     <section class="zindex1">
         <div class="container voorstellingen__container">
-            <h2 class="voorstellingen__title">Straatfestival Programma 2018
-            </h2>
+            <h2 class="voorstellingen__title">Straatfestival Programma 2018</h2>
             <p class="voorstellingen__undertitle">Het volledige programma van het Straattheaterfestival wordt <span
                     class="font--bold">gratis</span>
                 aangeboden!
@@ -12,26 +11,32 @@
         <div class="voorstellingen__grid--lg">
             <div class="voorstellingen__filters">
                 <div class="container">
-                    <form>
+                    <form class="filter__form" method="get" action="index.php">
+                        <input type="hidden" name="page" value="voorstellingen">
+                        <input type="hidden" name="action" value="filter">
                         <div class="filters-container">
                             <div class="extra7"></div>
                             <div class="dagen-container">
                                 <span class="filter-title">Dagen</span>
                                 <ul class="dagen__inputs">
                                     <li class="dagen__li">
-                                        <input id="alledagen" type="radio" name="dagen">
+                                        <input value="" <?php if(isset($checkedAll)) echo $checkedAll; ?> id="alledagen"
+                                            type="radio" name="day">
                                         <label for="alledagen">Alle Dagen</label>
                                     </li>
                                     <li class="dagen__li">
-                                        <input id="vrijdag" type="radio" name="dagen">
+                                        <input <?php if(isset($checkedVrijdag)) echo $checkedVrijdag; ?> value="Vrijdag"
+                                            id="vrijdag" type="radio" name="day">
                                         <label for="vrijdag">Vrijdag</label>
                                     </li>
                                     <li class="dagen__li">
-                                        <input id="zaterdag" type="radio" name="dagen">
+                                        <input <?php if(isset($checkedZaterdag)) echo $checkedZaterdag; ?>
+                                            value="Zaterdag" id="zaterdag" type="radio" name="day">
                                         <label for="zaterdag">Zaterdag</label>
                                     </li>
                                     <li class="dagen__li">
-                                        <input id="zondag" type="radio" name="dagen">
+                                        <input <?php if(isset($checkedZondag)) echo $checkedZondag; ?> value="Zondag"
+                                            id="zondag" type="radio" name="day">
                                         <label for="zondag">Zondag</label>
                                     </li>
                                 </ul>
@@ -39,40 +44,42 @@
                             <div class="filter-voorstellingen-container">
                                 <span class="filter-title title-voorstellingen">Voorstellingen</span>
                                 <div class="voorstellingen-inputs">
-                                    <input type="checkbox" name="voorstellingen" id="alles"><label for="alles"
-                                        class="label">Toon
-                                        Alles</label>
-                                    <input type="checkbox" name="voorstellingen" id="voorstellingen"><label
-                                        for="voorstellingen" class="label">Voorstellingen</label>
-                                    <input type="checkbox" name="voorstellingen" id="straatacts"><label for="straatacts"
+                                    <input value="Voorstelling" <?php if(isset($checkedtype1)) echo $checkedtype1; ?>
+                                        type="checkbox" name="type[]" id="voorstellingen"><label for="voorstellingen"
+                                        class="label">Voorstellingen</label>
+                                    <input value="Straatact" <?php if(isset($checkedtype2)) echo $checkedtype2; ?>
+                                        type="checkbox" name="type[]" id="straatacts"><label for="straatacts"
                                         class="label">Straatacts</label>
-                                    <input type="checkbox" name="voorstellingen" id="familievoorstellingen"><label
-                                        for="familievoorstellingen" class="label">Familievoorstellingen</label>
+                                    <input value="Familie Voorstelling"
+                                        <?php if(isset($checkedtype3)) echo $checkedtype3; ?> type="checkbox"
+                                        name="type[]" id="familievoorstellingen"><label for="familievoorstellingen"
+                                        class="label">Familievoorstellingen</label>
                                 </div>
                             </div>
                             <div class="searchsort-container">
                                 <div class="zoeken-container">
                                     <span class="filter-title zoeken-title">Zoeken</span>
                                     <div>
-                                        <input placeholder="titel" class="zoeken-input" type="text" name="search">
+                                        <input type="search" value='<?php echo $search; ?>' id="search" name="search"
+                                            placeholder="titel" class="zoeken-input">
                                     </div>
                                 </div>
                                 <div class="sorteren-container">
                                     <span class="filter-title zoeken-title">Sorteren</span>
                                     <div>
                                         <select class="sorteren-input" name="sort">
-                                            <option value="asc">
-                                                Starttijd &uarr;
-                                            </option>
-                                            <option value="desc">
+                                            <option <?php if(isset($selectedDESC)) echo $selectedDESC; ?> value="DESC">
                                                 Starttijd &darr;
+                                            </option>
+                                            <option <?php if(isset($selectedASC)) echo $selectedASC; ?> value="ASC">
+                                                Starttijd &uarr;
                                             </option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-container">
-                                <button type="submit" class="btn--animated btn btn-save">Opslaan</button>
+                                <button type="submit" class="btn-save">Opslaan</button>
                             </div>
                         </div>
                     </form>
@@ -84,6 +91,9 @@
                             $friday = true;
                             $saturday = true;
                             $sunday = true;
+                            if(empty($shows)){
+                              echo "<p class='voorstellingen__undertitle'>Geen voorstellingen gevonden</p>";
+                            }
                             foreach($shows as $show){
                             if($show['day'] == 'Vrijdag' && $friday == true){   ?>
                     <h3 class="heading-2 show__h2">Vrijdag</h3>

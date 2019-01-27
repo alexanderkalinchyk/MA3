@@ -18,13 +18,15 @@ $routes = array(
   )
 );
 
+
 if(empty($_GET['page'])) {
   $_GET['page'] = 'home';
 }
 if(empty($routes[$_GET['page']])) {
-  header('Location: index.php');
+  header('Location: ./');
   exit();
 }
+
 
 $route = $routes[$_GET['page']];
 $controllerName = $route['controller'] . 'Controller';
