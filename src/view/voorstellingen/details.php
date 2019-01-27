@@ -85,7 +85,7 @@
         <h2 class="heading-2">Andere Voorstellingen</h2>
         <div class="scrolling-wrapper andere__wrapper">
             <?php foreach($others as $andere){  ?>
-            <a href="#">
+            <a href="?page=details&id=<?php echo $andere['id']; ?>">
                 <article class="other-shows__article">
                     <picture>
                         <source media="(max-width: 3840px)"
