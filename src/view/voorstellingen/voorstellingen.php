@@ -152,7 +152,7 @@
                                 </li>
                                 <?php if(!empty($show['website'])){ ?>
                                 <li class="show__list show__web">
-                                    <div class="show__website"></div> <a class="show__link">
+                                    <div class="show__website"></div> <a href="http://<?php echo $show['website'];?>" target="_blank" class="show__link">
                                         <?php echo $show['website'];?></a>
                                 </li>
                                 <?php } ?>

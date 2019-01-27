@@ -1026,10 +1026,6 @@ a {
   display: none;
 }
 
-.vishidden {
-  visibility: hidden;
-}
-
 .partners {
   background-color: var(--color-white);
   transform: translateY(-4rem);
@@ -1745,14 +1741,15 @@ a {
 
 .submit-container {
   @media (--md) {
-    grid-column: 1 / 4;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
   }
 
   @media (--lg) {
     display: grid;
     grid-template-columns: auto;
     justify-items: baseline;
+    justify-content: inherit;
 
     & button {
       margin-left: 3rem;
@@ -1790,6 +1787,8 @@ a {
 }
 
 .show__link {
+  text-decoration: none;
+  color: var(--color-white);
 
   &:hover {
     text-decoration: underline;
@@ -1802,7 +1801,7 @@ a {
   margin-bottom: -30rem;
 
   @media (--md) {
-    transform: translateY(-35rem);
+    transform: translateY(-28rem);
     margin-bottom: -25rem;
   }
 

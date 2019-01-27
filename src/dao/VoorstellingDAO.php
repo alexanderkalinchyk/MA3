@@ -44,7 +44,7 @@ class VoorstellingDAO extends DAO {
   }
 
   public function selectAllTop() {
-    $sql = "SELECT * FROM `ma3_top_voorstellingen`";
+    $sql = "SELECT * FROM `ma3_top_voorstellingen` ORDER BY `id` DESC";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);

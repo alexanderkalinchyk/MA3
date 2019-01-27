@@ -50,8 +50,6 @@ require('./style.css');
     if ($filterForm) {
       $filterForm.addEventListener(`change`, handleSubmitFilterForm);
       $search.addEventListener(`keyup`, handleSubmitFilterForm);
-      const $btnsave = document.querySelector(`.btn-save`);
-      $btnsave.classList.add(`vishidden`);
     }
   };
   let friday = true;
@@ -166,7 +164,9 @@ require('./style.css');
       if (voorstelling['website'] !== '') {
         streturn += `
                                   <li class="show__list show__web">
-                                      <div class="show__website"></div> <a class="show__link">
+                                      <div class="show__website"></div> <a  href="http://${
+  voorstelling['website']
+}" target="_blank" class="show__link">
                                           ${voorstelling['website']}</a>
                                   </li> `;
       }
