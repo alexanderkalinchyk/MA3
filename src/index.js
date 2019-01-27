@@ -186,7 +186,6 @@ require('./style.css');
     }
   };
   const handleSubmitFilterForm = e => {
-    console.log('submit');
     e.preventDefault();
     const qs = new URLSearchParams([
       ...new FormData($filterForm).entries()

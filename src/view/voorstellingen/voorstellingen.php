@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="submit-container">
-                                <button type="submit" class="btn-save">Opslaan</button>
+                                <button type="submit" class="btn btn--animated btn-save">Opslaan</button>
                             </div>
                         </div>
                     </form>

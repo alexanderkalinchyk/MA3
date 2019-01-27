@@ -85,22 +85,24 @@
         <h2 class="heading-2">Andere Voorstellingen</h2>
         <div class="scrolling-wrapper andere__wrapper">
             <?php foreach($others as $andere){  ?>
-            <article class="other-shows__article">
-                <picture>
-                    <source media="(max-width: 3840px)"
-                        srcset="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.webp" type="image/webp">
-                    <source media="(max-width: 3840px)"
-                        srcset="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.jpg">
-                    <img class="" src="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.jpg"
-                        alt="<?php echo $andere['alt']; ?>" />
-                </picture>
-                <h3 class="andere__h3"><?php echo $andere['name']; ?></h3>
-                <?php
+            <a href="#">
+                <article class="other-shows__article">
+                    <picture>
+                        <source media="(max-width: 3840px)"
+                            srcset="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.webp" type="image/webp">
+                        <source media="(max-width: 3840px)"
+                            srcset="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.jpg">
+                        <img class="" src="assets/img/thumbnails_desktop/<?php echo $andere['img']; ?>.jpg"
+                            alt="<?php echo $andere['alt']; ?>" />
+                    </picture>
+                    <h3 class="andere__h3"><?php echo $andere['name']; ?></h3>
+                    <?php
                   $originalDate2 = $andere['date'];
                   $newDate2 = date("d/m", strtotime($originalDate2));
                 ?>
-                <p class="andere__p"><?php echo $andere['day']; ?> <?php echo $newDate2; ?></p>
-            </article>
+                    <p class="andere__p"><?php echo $andere['day']; ?> <?php echo $newDate2; ?></p>
+                </article>
+            </a>
             <?php } ?>
         </div>
     </section>

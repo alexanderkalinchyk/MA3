@@ -11,7 +11,7 @@
                     Alle ogen gericht op <br />
                     24, 25, en 26 augustus 2018
                 </p>
-                <a class="cta-btn btn--animated" href="#">Bekijk Het Programma</a>
+                <a class="cta-btn btn--animated" href="?page=voorstellingen">Bekijk Het Programma</a>
                 <div class="scroll-link" href="#content">
                     <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 100 150"
                         preserveAspectRatio="xMidYMid meet">

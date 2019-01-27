@@ -1398,7 +1398,7 @@ a {
 }
 
 .voorstellingen__undertitle {
-  color: var(--color-purple);
+  color: var(--color-violet);
   font-size: 1.8rem;
   text-align: center;
   width: 93%;
@@ -1491,6 +1491,14 @@ a {
   grid-gap: .5rem;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media (--lg) {
+
+    & a {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   @media (--xl) {
     width: 80%;

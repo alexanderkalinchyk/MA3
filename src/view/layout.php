@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>INTERNATIONAAL STRAATFESTIVAL BEVEREN - <?php echo $title; ?></title>
 
+
     <!--
     <script>
     WebFontConfig = {
